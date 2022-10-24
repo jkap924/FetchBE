@@ -1,0 +1,23 @@
+Fetch Backend Software Engineering Take Home Test
+
+This application can be run by running the 'app.py' file. 
+
+Once it is run the web server can be accessed on any web browser using 'localhost:5000'
+
+There is a database preloaded with the following data points
+
+{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }
+{ "payer": "UNILEVER", "points": 200, "timestamp": "2020-10-31T11:00:00Z" }
+{ "payer": "DANNON", "points": -200, "timestamp": "2020-10-31T15:00:00Z" }
+{ "payer": "MILLER COORS", "points": 10000, "timestamp": "2020-11-01T14:00:00Z" }
+{ "payer": "DANNON", "points": 300, "timestamp": "2020-10-31T10:00:00Z" }
+
+Going to 'localhost:5000/addTransaction' will bring up a page in which the user can type in 
+a payer, point amount, and timestamp to enter a new data point into the database. The 
+timestamp must be entered as text, in the same format as in the examples above.
+
+Going to 'localhost:5000/spendPoints' will bring up a page in which the user can type in
+a point amount to be spent, that will take points from the oldest transactions and return 
+the payers and the amount of points taken from each. 
+
+Going to 'localhost:5000/pointsBalance' will show a JSON of the current balance of each payer
